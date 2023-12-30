@@ -7,6 +7,25 @@ export default function App (){
       <Text style={styles.title}>
         Hey there
       </Text>
+
+
+    <View  >
+      <View  style = {[styles.box , styles.lightbluebg]}>
+      <Text>LightBlue Box </Text>
+      
+      </View>
+      <View style = {[styles.box , styles.lightgreenbg]}>
+      <Text> LightGreen Box</Text>
+      
+      </View>
+
+    </View>
+
+
+
+
+
+
     
     
     </View>
@@ -19,7 +38,33 @@ export default function App (){
 
 export const styles = StyleSheet.create({
   container : {flex:1 , backgroundColor: 'plum' , padding: 60 },
-  title: {color:'white', marginTop: 100, backgroundColor: 'black' , textAlign:"center" , borderRadius: 50}
+  title: {color:'white', marginTop: 100, backgroundColor: 'black' , textAlign:"center" , borderRadius: 50},
+ 
+  box : {
+    height: 50,
+    width: 150,
+    marginVertical: 10 ,
+    marginHorizontal: 10 ,
+    paddingHorizontal: 10 ,
+    paddingVertical: 10,
+    borderWidth: 2,
+    borderColor: " purple" ,
+    borderStyle: "solid"
+
+  },
+
+
+  lightbluebg:{
+    backgroundColor : "lightblue"
+  },
+
+  lightgreenbg:{
+    backgroundColor : "lightgreen"
+  }
+
+
+
+
 })
 
 
