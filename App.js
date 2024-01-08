@@ -6,15 +6,22 @@ export default function App (){
     <View style={styles.container}>
       <Text style={styles.title}>
         Hey there
+
       </Text>
 
 
+      <View style= {styles.darkmode}>
+          <Text style={styles.darkText}> Inheritance <Text style= {styles.boldText}>in Bold</Text></Text>
+      
+      </View>
+
+
     <View  >
-      <View  style = {[styles.box , styles.lightbluebg]}>
+      <View  style = {[styles.box , styles.lightbluebg, styles.boxShadow , styles.androidShadow]}>
       <Text>LightBlue Box </Text>
       
       </View>
-      <View style = {[styles.box , styles.lightgreenbg]}>
+      <View style = {[styles.box , styles.lightgreenbg,styles.androidShadow]}>
       <Text> LightGreen Box</Text>
       
       </View>
@@ -37,11 +44,11 @@ export default function App (){
 
 
 export const styles = StyleSheet.create({
-  container : {flex:1 , backgroundColor: 'plum' , padding: 60 },
+  container : {flex:1 , backgroundColor: 'white' , padding: 60 },
   title: {color:'white', marginTop: 100, backgroundColor: 'black' , textAlign:"center" , borderRadius: 50},
  
   box : {
-    height: 50,
+    height: 150,
     width: 150,
     marginVertical: 10 ,
     marginHorizontal: 10 ,
@@ -53,6 +60,24 @@ export const styles = StyleSheet.create({
 
   },
 
+  darkmode:{
+    backgroundColor: "black" ,
+
+  },
+  darkText :{
+    color: "#fff" ,
+  },
+
+
+  boldText:{
+    fontWeight:'bold'
+  },
+
+
+
+
+
+
 
   lightbluebg:{
     backgroundColor : "lightblue"
@@ -60,7 +85,22 @@ export const styles = StyleSheet.create({
 
   lightgreenbg:{
     backgroundColor : "lightgreen"
-  }
+  },
+
+  boxShadow:{
+    shadowColor: "blue",
+    shadowOffset:{
+      width: 6 ,
+      height: 6 ,
+
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+
+  },
+    androidShadow:{
+      elevation: 20  ,
+    }
 
 
 
